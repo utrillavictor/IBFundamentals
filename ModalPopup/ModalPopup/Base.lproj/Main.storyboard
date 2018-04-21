@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModalPopup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SquirrelPage" translatesAutoresizingMaskIntoConstraints="NO" id="dU1-2a-aiv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geI-Uz-B2B">
+                                <rect key="frame" x="75" y="538" width="225" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="mJK-v5-5o5" kind="presentation" id="xIC-li-zxD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dU1-2a-aiv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IXF-o1-4BX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dU1-2a-aiv" secondAttribute="trailing" id="LMJ-fl-yHP"/>
+                            <constraint firstItem="dU1-2a-aiv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mfj-pB-lRT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dU1-2a-aiv" secondAttribute="bottom" id="USv-Uz-4jJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--PopupVC-->
+        <scene sceneID="uWF-09-uJM">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="mJK-v5-5o5" customClass="PopupVC" customModule="ModalPopup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L56-0x-fLX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNQ-0K-hAM">
+                                <rect key="frame" x="62" y="208" width="250" height="250"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="benny" translatesAutoresizingMaskIntoConstraints="NO" id="IQ5-oZ-U2a">
+                                        <rect key="frame" x="-4" y="0.0" width="259" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umv-Nb-zmZ">
+                                        <rect key="frame" x="0.0" y="210" width="250" height="40"/>
+                                        <color key="backgroundColor" red="0.34513726830000002" green="0.58797413109999996" blue="0.33284366129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WqO-dD-fxP"/>
+                                        </constraints>
+                                        <state key="normal" title="Dismiss">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopup:" destination="mJK-v5-5o5" eventType="touchUpInside" id="Pr8-8g-JrS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9eG-4e-1od"/>
+                                    <constraint firstAttribute="trailing" secondItem="Umv-Nb-zmZ" secondAttribute="trailing" id="EKJ-W8-zG9"/>
+                                    <constraint firstAttribute="height" constant="250" id="pA3-ug-FLu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Umv-Nb-zmZ" secondAttribute="bottom" id="q8a-1Y-o3T"/>
+                                    <constraint firstItem="Umv-Nb-zmZ" firstAttribute="leading" secondItem="dNQ-0K-hAM" secondAttribute="leading" id="uou-jV-Drt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.25334439212328769" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dNQ-0K-hAM" firstAttribute="centerX" secondItem="L56-0x-fLX" secondAttribute="centerX" id="G2f-Mk-Ss1"/>
+                            <constraint firstItem="dNQ-0K-hAM" firstAttribute="centerY" secondItem="L56-0x-fLX" secondAttribute="centerY" id="M9U-3c-CAx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ace-Fi-ZOE"/>
+                    </view>
+                    <connections>
+                        <outlet property="popupview" destination="dNQ-0K-hAM" id="84Z-g5-mZ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OiF-yJ-7xI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725.60000000000002" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SquirrelPage" width="414" height="736"/>
+        <image name="benny" width="250" height="250"/>
+    </resources>
+</document>

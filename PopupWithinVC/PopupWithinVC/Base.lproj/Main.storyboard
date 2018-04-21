@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopupWithinVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SquirrelPage" translatesAutoresizingMaskIntoConstraints="NO" id="fLU-8d-bGv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEJ-lH-8Ya">
+                                <rect key="frame" x="75" y="538" width="225" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="popupDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ud-bx-0Ya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edw-hy-91Q" userLabel="Background Button">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="closePopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWw-uM-Fm0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brv-zm-fJ0">
+                                <rect key="frame" x="-287.5" y="208.5" width="250" height="250"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="benny" translatesAutoresizingMaskIntoConstraints="NO" id="Pgb-M9-wgW">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="CN9-mX-bl9"/>
+                                            <constraint firstAttribute="width" constant="250" id="y8Q-20-T59"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHJ-k4-PiP">
+                                        <rect key="frame" x="0.0" y="210" width="250" height="40"/>
+                                        <color key="backgroundColor" red="0.34901960780000002" green="0.74117647060000003" blue="0.35294117650000001" alpha="0.51222709760273977" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="zaT-1f-noP"/>
+                                        </constraints>
+                                        <state key="normal" title="Dismiss">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="im0-rz-diT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pgb-M9-wgW" firstAttribute="leading" secondItem="Brv-zm-fJ0" secondAttribute="leading" id="6WA-gJ-CSV"/>
+                                    <constraint firstAttribute="width" constant="250" id="9m8-k0-6XJ"/>
+                                    <constraint firstItem="LHJ-k4-PiP" firstAttribute="leading" secondItem="Brv-zm-fJ0" secondAttribute="leading" id="NMR-np-1QK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pgb-M9-wgW" secondAttribute="bottom" id="OXx-x4-3rr"/>
+                                    <constraint firstItem="Pgb-M9-wgW" firstAttribute="top" secondItem="Brv-zm-fJ0" secondAttribute="top" id="OcB-95-TF9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pgb-M9-wgW" secondAttribute="trailing" id="PWN-9f-9Ot"/>
+                                    <constraint firstAttribute="height" constant="250" id="Qf0-UF-XsJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LHJ-k4-PiP" secondAttribute="trailing" id="x4I-BO-0FM"/>
+                                    <constraint firstAttribute="bottom" secondItem="LHJ-k4-PiP" secondAttribute="bottom" id="zQk-nU-ycO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="edw-hy-91Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="35U-br-jHu"/>
+                            <constraint firstItem="Brv-zm-fJ0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-350" id="54p-Mg-0bg"/>
+                            <constraint firstItem="fLU-8d-bGv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8fr-A3-xiC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fLU-8d-bGv" secondAttribute="bottom" id="Vsh-uh-z31"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="edw-hy-91Q" secondAttribute="trailing" id="ka3-w1-1wv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLU-8d-bGv" secondAttribute="trailing" id="nLp-FY-4rA"/>
+                            <constraint firstItem="Brv-zm-fJ0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oJ8-Oc-M8y"/>
+                            <constraint firstItem="edw-hy-91Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qRE-Er-m9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="edw-hy-91Q" secondAttribute="bottom" id="vKm-68-IJ8"/>
+                            <constraint firstItem="fLU-8d-bGv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yXf-qn-vf1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundButton" destination="edw-hy-91Q" id="kAx-fu-X4n"/>
+                        <outlet property="centerPopupConstraint" destination="54p-Mg-0bg" id="JpH-mI-IaJ"/>
+                        <outlet property="popupView" destination="Brv-zm-fJ0" id="AvG-4S-Xw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SquirrelPage" width="414" height="736"/>
+        <image name="benny" width="250" height="250"/>
+    </resources>
+</document>
